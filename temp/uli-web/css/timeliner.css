@@ -4,13 +4,13 @@
 /*time-line- all the line*/
 .timeline-container {
  /* background: url(../images/bookicon.png) left center repeat-y;  */
-  border-left: 4px solid #890404; /* - red line */
+  border-left: 4px solid #fcd7aa; /* - red line */
   margin: 1px auto;
   width: 600px;
 }
 /* EXPENTALL*/
 .timeline-toggle {
-  background: #ab221b;
+  background: #fcd7aa;
   border-color: #999;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
@@ -40,7 +40,7 @@
 }
 /*year*/
 .timeline-wrapper h2 span {
-  background: #740303;
+  background: #fcd7aa;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
@@ -53,20 +53,34 @@
   clear: left;
   float: left;
   margin: 0 12px 0 0;
-  padding: 4px 4px 4px 0;
+  padding: 0 0 0 25px;
   position: relative;
   width: 880px;
 }
+
+.timeline-series dl {
+    width:100%; 
+    overflow: hidden; 
+    padding: 0;
+    margin: 0;
+}
 .timeline-series dt {
- /* background: url(../images/bookicon.png) left center no-repeat;  */
+    float:left;
+    width:3%;
+    padding:0;
+    margin:0;
+
+
+ /* background: url(../images/bookicon.png) left center no-repeat;
   clear: left;
   font-size: 0.9em;
   list-style-type: none;
-  line-height: 1em; /*space betwen to books*/
+  line-height: 1em; /*space betwen to books
   
   margin: 0 0 12px;
   padding: 0 0 0 24px;
-  white-space: nowrap;
+  white-space: nowrap;  */
+
 }
 /*title*/
 .timeline-series dt a {
@@ -123,7 +137,7 @@
   font-size: 1.8em;
   margin-left: 0;
   padding: 0 30px;
-  width: 400px;
+  width: 40px;
 }
 .timeline-event-content blockquote .attribution {
   font-size: 0.7em;
