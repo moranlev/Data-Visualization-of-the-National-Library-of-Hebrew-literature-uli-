@@ -24,7 +24,7 @@ a {
 	}
 
 a:hover {
-	background: #900;
+
 	color: #FFF;
 	}
 
@@ -57,32 +57,41 @@ ul#navmenu li {
 
 /* Root Menu */
 ul#navmenu a {
-	border: 1px solid #FFF;
-	border-right-color: #CCC;
-	border-bottom-color: #CCC;
-	padding: 0 6px;
-	display: block;
-	background: #EEE;
-	color: #666;
-	font: bold 10px/22px Verdana, Arial, Helvetica, sans-serif;
-	text-decoration: none;
-	height: auto !important;
-	height: 1%; /*For IE*/
-	}
+    border: 6px solid #FFF;
+    border-right-color: #FFF;
+    border-bottom-color: #EEE;
+    padding: 0 10px;
+    display: block;
+    background: #fcd7aa;
+    color: #666;
+    font: bold 10px/22px Verdana, Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    height: auto !important;
+    height: 1%;
+}
 
 /* Root Menu Hover Persistence */
 ul#navmenu a:hover,
 ul#navmenu li:hover a,
 ul#navmenu li.iehover a {
-	background: #CCC;
+	background: #EEE;
 	color: #FFF;
 	}
 
 /* 2nd Menu */
 ul#navmenu li:hover li a,
 ul#navmenu li.iehover li a {
-	background: #EEE;
-	color: #666;
+ border: 6px solid #FFF;
+    border-right-color: #FFF;
+    border-bottom-color: #EEE;
+    padding: 0 10px;
+    display: block;
+    background: #fcd7aa;
+    color: #666;
+    font: bold 10px/22px Verdana, Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    height: auto !important;
+    height: 1%;
 	}
 
 /* 2nd Menu Hover Persistence */
@@ -90,15 +99,24 @@ ul#navmenu li:hover li a:hover,
 ul#navmenu li:hover li:hover a,
 ul#navmenu li.iehover li a:hover,
 ul#navmenu li.iehover li.iehover a {
-	background: #CCC;
+	background: #EEE;
 	color: #FFF;
 	}
 
 /* 3rd Menu */
 ul#navmenu li:hover li:hover li a,
 ul#navmenu li.iehover li.iehover li a {
-	background: #EEE;
-	color: #666;
+	 border: 6px solid #FFF;
+    border-right-color: #FFF;
+    border-bottom-color: #EEE;
+    padding: 0 10px;
+    display: block;
+    background: #fcd7aa;
+    color: #666;
+    font: bold 10px/22px Verdana, Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    height: auto !important;
+    height: 1%;
 	}
 
 /* 3rd Menu Hover Persistence */
@@ -106,21 +124,30 @@ ul#navmenu li:hover li:hover li a:hover,
 ul#navmenu li:hover li:hover li:hover a,
 ul#navmenu li.iehover li.iehover li a:hover,
 ul#navmenu li.iehover li.iehover li.iehover a {
-	background: #CCC;
+	background: #EEE;
 	color: #FFF;
 	}
 
 /* 4th Menu */
 ul#navmenu li:hover li:hover li:hover li a,
 ul#navmenu li.iehover li.iehover li.iehover li a {
-	background: #EEE;
-	color: #666;
+ border: 6px solid #FFF;
+    border-right-color: #FFF;
+    border-bottom-color: #EEE;
+    padding: 0 10px;
+    display: block;
+    background: #fcd7aa;
+    color: #666;
+    font: bold 10px/22px Verdana, Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    height: auto !important;
+    height: 1%;
 	}
 
 /* 4th Menu Hover */
 ul#navmenu li:hover li:hover li:hover li a:hover,
 ul#navmenu li.iehover li.iehover li.iehover li a:hover {
-	background: #CCC;
+	background: #EEE;
 	color: #FFF;
 	}
 
