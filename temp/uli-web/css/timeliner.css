@@ -55,7 +55,8 @@
   margin: 0 12px 0 0;
   padding: 0 0 0 25px;
   position: relative;
-  width: 880px;
+  width: 65%;
+  height:initial;
 }
 
 .timeline-series dl {
@@ -63,10 +64,11 @@
     overflow: hidden; 
     padding: 0;
     margin: 0;
+  
 }
 .timeline-series dt {
     float:left;
-    width:3%;
+    width:4%;
     padding:0;
     margin:0;
 
@@ -91,7 +93,7 @@
 .timeline-series dt a .closed {
   color: #999;
   font-size: 1em;
-  margin-left: 0;
+  margin-left: 10%;
 }
 .timeline-series dt a .open {
   color: #7DBADF;

@@ -57,9 +57,9 @@ ul#navmenu li {
 
 /* Root Menu */
 ul#navmenu a {
-    border: 6px solid #FFF;
-    border-right-color: #FFF;
-    border-bottom-color: #EEE;
+    border: 6px solid #eee;
+    border-right-color: #ccc;
+    border-bottom-color: #ccc;
     padding: 0 10px;
     display: block;
     background: #fcd7aa;
@@ -81,9 +81,9 @@ ul#navmenu li.iehover a {
 /* 2nd Menu */
 ul#navmenu li:hover li a,
 ul#navmenu li.iehover li a {
- border: 6px solid #FFF;
-    border-right-color: #FFF;
-    border-bottom-color: #EEE;
+ border: 6px solid #eee;
+    border-right-color: #ccc;
+    border-bottom-color: #ccc;
     padding: 0 10px;
     display: block;
     background: #fcd7aa;
@@ -106,9 +106,9 @@ ul#navmenu li.iehover li.iehover a {
 /* 3rd Menu */
 ul#navmenu li:hover li:hover li a,
 ul#navmenu li.iehover li.iehover li a {
-	 border: 6px solid #FFF;
-    border-right-color: #FFF;
-    border-bottom-color: #EEE;
+	 border: 6px solid #eee;
+    border-right-color: #ccc;
+    border-bottom-color: #ccc;
     padding: 0 10px;
     display: block;
     background: #fcd7aa;
@@ -131,9 +131,9 @@ ul#navmenu li.iehover li.iehover li.iehover a {
 /* 4th Menu */
 ul#navmenu li:hover li:hover li:hover li a,
 ul#navmenu li.iehover li.iehover li.iehover li a {
- border: 6px solid #FFF;
-    border-right-color: #FFF;
-    border-bottom-color: #EEE;
+ border: 6px solid #eee;
+    border-right-color: #ccc;
+    border-bottom-color: #ccc;
     padding: 0 10px;
     display: block;
     background: #fcd7aa;
