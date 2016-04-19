@@ -41,6 +41,23 @@
     <script language="JavaScript" src="ie.js" type="text/JavaScript"></script>
     <![endif]-->
 
+
+    <script type="text/javascript">
+        $(function(){
+            $.getJSON('js/2007.json', function (data) {
+                $("#title").text(data.fulltitle);
+                $("#year").text(data.year);
+                $("#").text(data.comments);
+                $("#subjects").text(data.subjects);
+                
+                console.log(data.fulltitle);
+
+            });
+        
+        });
+    </script> 
+
+
     
 </head>
 <body class="homepage">
@@ -267,9 +284,13 @@
                                   <dl class="timeline-series">
                                       <dt id="19540517" class="timeline-event"><a><img src="images/bookicon1.png" /></a></dt>
                                       <dd class="timeline-event-content" id="19540517EX">
-                                          <div class="media">
-                                              <img src="http://www.text.org.il/05_covers/0510121.jpg" width="150" height="180" />
-                                          </div>
+                                  
+                                          <p style="font-size:medium" id="title"></p>
+                                          <h1 id="year"></h1>
+                                          <p style="font-size:medium" id="comments"> </p>
+                                          <p style="font-size:medium" id="subjects"></p>
+
+                                          
                                           <p style="font-size:medium">בספר בא אל הקודש, חושף ארי אַלון אגדות נסתרות, המהוות גילויים אישיים ופירושים חדשניים לאגדות מהמקרא והתלמוד.בכתיבה חוצה ז'אנרים, במעברים בלתי פוסקים מן הפרטי לאובייקטיבי, מנתח אֵלון 36 אגדות מן המקרא והתלמוד. קודש </p>
                                           <p class="taba" style="font-size:small">מאת: ארי אֵלון</p>
                                           <p class="taba" style="font-size:small">הוצאה לאור:  ידיעות אחרונות</p>
@@ -553,14 +574,6 @@
           </div>
 
       </article>
-
-
-
-
-
-
-
-
 
 
 
