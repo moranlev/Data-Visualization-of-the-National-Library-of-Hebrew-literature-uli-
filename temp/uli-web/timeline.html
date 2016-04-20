@@ -1,36 +1,36 @@
-﻿<!DOCTYPE HTML>
-<html>
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <title>הספרייה הלאומית</title>
-    <meta charset="utf-8">
-    <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400" rel="stylesheet">
+    <meta charset="utf-8" />
+    <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400" rel="stylesheet" />
     <script src="js/jquery-1.9.1.min.js"></script>
     <script src="css/5grid/init.js?use=mobile,desktop"></script>
     <script src="js/jquery.formerize-1.1.js"></script>
     <script src="js/init.js"></script>
     <noscript>
-        <link rel="stylesheet" href="css/5grid/core.css">
-        <link rel="stylesheet" href="css/5grid/core-desktop.css">
-        <link rel="stylesheet" href="css/5grid/core-1200px.css">
-        <link rel="stylesheet" href="css/5grid/core-noscript.css">
-        <link rel="stylesheet" href="css/style.css">
-        <link rel="stylesheet" href="css/style-desktop.css">
-        <link rel="stylesheet" href="css/noscript.css">
+        <link rel="stylesheet" href="css/5grid/core.css" />
+        <link rel="stylesheet" href="css/5grid/core-desktop.css" />
+        <link rel="stylesheet" href="css/5grid/core-1200px.css" />
+        <link rel="stylesheet" href="css/5grid/core-noscript.css" />
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="css/style-desktop.css" />
+        <link rel="stylesheet" href="css/noscript.css" />
     </noscript>
     <!--[if lte IE 8]>
     <link rel="stylesheet" href="css/ie8.css">
     <![endif]-->
     <!--הגדרות סקריפט לציר הזמן-->
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 
     <link rel="canonical" href="https://technotarek.com/timeliner/timeliner.html" />
-    <link rel="stylesheet" href="css/demo.css" type="text/css" media="screen">
-    <link rel="stylesheet" href="css/timeliner.css" type="text/css" media="screen">
-    <link rel="stylesheet" href="css/responsive.css" type="text/css" media="screen">
-    <link rel="stylesheet" href="inc/colorbox.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="css/demo.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="css/timeliner.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="css/responsive.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="inc/colorbox.css" type="text/css" media="screen" />
 
-    <link rel="stylesheet" href="css/timeliner.css" type="text/css" media="screen">
-    <link rel="stylesheet" href="css/demo.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="css/timeliner.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="css/demo.css" type="text/css" media="screen" />
 
     <!--הגדרות סקריפט לפנל החיפוש-->
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -57,14 +57,14 @@
 
 
 </head>
-<body class="homepage">
-    <div id="wrapper">
-        <nav id="nav"> <a href="#email" class="icon icon-mail"><span>Email Me</span></a> <a href="#work" class="icon icon-folder"><span>Work</span></a> <a href="#me" class="icon icon-user active"><span>Me</span></a>   </nav>
+<body >
+    <div id="wrapper" style="opacity: 1; padding-top: 36.5px;">
+        <nav id="nav"> <a href="email.html" class="icon icon-mail"><span>Email Me</span></a> <a href="category.html" class="icon icon-folder active"><span>category</span></a> <a href="home.html" class="icon icon-user"><span>Home</span></a>   </nav>
         <div id="main">
 
             <!-- ציר הזמן -->
 
-            <article id="category" class="panel">
+            <article id="timeline" class="panel">
                 <!--   <div style=" background-image:url('images/bookShelf.jpg'); background-size:cover; "/>  -->
 
                 <header>
@@ -483,21 +483,21 @@
                                 <script type="text/javascript" src="inc/colorbox.js"></script>
                                 <script type="text/javascript" src="js/timeliner.js"></script>
                                 <script>
-                              $(document).ready(function () {
-                                  $.timeliner({
-                                      startOpen: ['#19550828', '#19630828'],
-                                  });
-                                  $.timeliner({
-                                      timelineContainer: '#timeline-js',
-                                      timelineSectionMarker: '.milestone',
-                                      oneOpen: true,
-                                      startState: 'flat',
-                                      expandAllText: '+ Show All',
-                                      collapseAllText: '- Hide All'
-                                  });
-                                  // Colorbox Modal
-                                  $(".CBmodal").colorbox({ inline: true, initialWidth: 100, maxWidth: 682, initialHeight: 100, transition: "elastic", speed: 750 });
-                              });
+                                    $(document).ready(function () {
+                                        $.timeliner({
+                                            startOpen: ['#19550828', '#19630828'],
+                                        });
+                                        $.timeliner({
+                                            timelineContainer: '#timeline-js',
+                                            timelineSectionMarker: '.milestone',
+                                            oneOpen: true,
+                                            startState: 'flat',
+                                            expandAllText: '+ Show All',
+                                            collapseAllText: '- Hide All'
+                                        });
+                                        // Colorbox Modal
+                                        $(".CBmodal").colorbox({ inline: true, initialWidth: 100, maxWidth: 682, initialHeight: 100, transition: "elastic", speed: 750 });
+                                    });
                                 </script>
                             </th>
                         </tr>
