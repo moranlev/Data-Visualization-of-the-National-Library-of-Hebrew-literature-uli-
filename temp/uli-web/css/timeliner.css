@@ -4,9 +4,10 @@
 /*time-line- all the line*/
 .timeline-container {
  /* background: url(../images/bookicon.png) left center repeat-y;  */
-  border-left: 4px solid #fcd7aa; /* - red line */
+  border-left: 3px solid #666; /* - red line */
   margin: 1px auto;
   width: 600px;
+
 }
 /* EXPENTALL*/
 .timeline-toggle {
@@ -24,10 +25,10 @@
   white-space: nowrap;
 }
 .timeline-wrapper {
-  clear: left;
+ clear: left;
   float: left;
-  margin: 0 0 12px;
-  width: 900px;
+
+  width:auto;
 }
 .timeline-wrapper h2 {
   background: url(../images/timeline_century_tick.gif) left center no-repeat;
@@ -40,6 +41,16 @@
 }
 /*year*/
 .timeline-wrapper h2 span {
+ background: url(../images/iconYear.png) repeat-x; 
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 1px;
+  border-radius: 1px;
+  color: #666;
+  letter-spacing: 0.1em;
+  font-size:22px;
+  line-height:1.5em;
+  padding: 18px 0px 4px;
+  /* 
   background: #fcd7aa;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
@@ -48,14 +59,15 @@
   letter-spacing: 0.1em;
   line-height: 1.7em;
   padding: 3px 5px 1px;
+      */
 }
 .timeline-series {
   clear: left;
   float: left;
   margin: 0 12px 0 0;
   padding: 0 0 0 25px;
-  position: relative;
-  width: 65%;
+  
+  width: 650px;
   height:initial;
 }
 
@@ -165,4 +177,17 @@
 }
 .timeline-event-content .media a:hover {
   color: #7DBADF;
+}
+.book-like-out-bar{
+       height: auto;
+       
+    
+}
+.book-count-bar{
+   height: 22px;
+   background-color:#BD9796;
+   
+}
+.fixed{
+    margin-bottom:5px;
 }
