@@ -3,6 +3,7 @@
 <head>
     <title>הספרייה הלאומית</title>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" /><!---->
     <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400" rel="stylesheet" />
     <script src="js/jquery-1.9.1.min.js"></script>
     
@@ -16,7 +17,12 @@
     <script src="css/5grid/init.js?use=mobile,desktop"></script>
     <script src="js/jquery.formerize-1.1.js"></script>
     <script src="js/init.js"></script>
+  
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script><!---->
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script><!---->
     <noscript>
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" /><!---->
         <link rel="stylesheet" href="css/5grid/core.css" />
         <link rel="stylesheet" href="css/5grid/core-desktop.css" />
         <link rel="stylesheet" href="css/5grid/core-1200px.css" />
@@ -45,7 +51,7 @@
     <div id="wrapper" style="opacity: 1; padding-top: 36.5px;" ng-controller="BookTimeLineCtrl">
        <!-- tool bar for navigate from page to page-------- home- category- email -->
         <nav id="nav"> <a href="email.html" class="icon icon-mail"><span>Email Me</span></a> <a href="category.html" class="icon icon-folder active"><span>category</span></a> <a href="home.html" class="icon icon-user"><span>Home</span></a>   </nav>
-    <!--  the main is the wite page in the website that contain the function of the user interface -->   
+     <!--  the main is the wite page in the website that contain the function of the user interface -->   
      <div id="main" style="display: inline-block;">
            <!--ng- repeat=  the year of the book= KEY & VALUE= the number of books in the same year -->
          <div ng-repeat="(key,value) in bookDic" style="display:inherit;width: 100%;">
@@ -58,8 +64,45 @@
                             <span class="caret pull-right fixed"></span>
                             <div class="row" uib-collapse="isCollapsed">
                                 <div class="well well-lg">
-                                     <span ng-repeat="book in value" class="timeline-event" data-toggle="modal" data-target="#myModal"><img src="images/bookicon1.png" /></span>
-                                  </div>
+                                     <span ng-repeat="book in value"  data-toggle="modal" data-target="#myModal"><img src="images/bookicon1.png" /></span>
+                                
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    <div class="modal fade" id="myModal" role="dialog">
+                                        <div class="modal-dialog">
+                                            <!-- Trigger the modal with a button -->
+                                            <input type="image" class="btn btn-info btn-lg" src="images/bookicon1.png" alt="Submit" data-toggle="modal" data-target="#myModal" />
+
+                                            <!-- Modal content-->
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                                    <h4 class="modal-title" style="text-align:right;">:שם הספר</h4>
+                                                </div>
+                                                <div class="modal-body"  style="text-align:right;">
+                                                    <div class="col-xs-1" ng-bind="key"></div>
+                                                    <p> שם המחבר/ת:</p> 
+                                                    <p>:שנת הוצאה</p>
+                                                    <p>:שם הוצאה</p>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                      
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -67,26 +110,10 @@
 
         
             </div>
-            <div class="modal fade" id="myModal" role="dialog">
-                <div class="modal-dialog">
-
-                    <!-- Modal content-->
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal">&times;</button>
-                            <h4 class="modal-title">Modal Header</h4>
-                        </div>
-                        <div class="modal-body">
-                            <p>Some text in the modal.</p>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
+    
         </div><!-- main -->
+
+
 
         <div id="footer">
             <ul class="links">
