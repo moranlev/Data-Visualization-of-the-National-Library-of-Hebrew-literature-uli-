@@ -73,6 +73,30 @@
    background-color:#7D1515;
    
 }
+.book-count-bar:active {
+	position:relative;
+	top:1px;
+}
+
+.book-count-bar:hover {
+    background-color: #bd1717;
+}
 .fixed{
     margin-bottom:5px;
 }
+
+.book{
+        margin-left: 0.4%;
+}
+.book:active{
+    	position:relative;
+	top:1px;
+}
+.book:hover{
+  	position:relative;
+	top:3px;
+}
+
+
+
+
