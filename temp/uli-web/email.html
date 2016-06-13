@@ -9,14 +9,12 @@
     <script src="js/jquery.formerize-1.1.js"></script>
     <script src="js/init.js"></script>
     <noscript>
-        <link rel="stylesheet" href="css/5grid/core.css">
-        <link rel="stylesheet" href="css/5grid/core-desktop.css">
-        <link rel="stylesheet" href="css/5grid/core-1200px.css">
-        <link rel="stylesheet" href="css/5grid/core-noscript.css">
+    
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="css/style-desktop.css">
-        <link rel="stylesheet" href="css/noscript.css">
+    
     </noscript>
+  
 
 
 </head>
@@ -41,7 +39,7 @@
                         </div>
                         <div class="row">
                             <div class="12u">
-                                <input style="text-align:right;" type="text" class="text" name="subject" placeholder="נושא">
+                                <input style="text-align:right;" type="text" id="bookTitle" class="text" name="subject" placeholder="נושא">
                             </div>
                         </div>
                         <div class="row">
@@ -68,5 +66,11 @@
         </div>
 
     </div><!--wrapper-->
+
+    <script>
+        var myParam = location.search.split('name=')[1];
+        myParam = (decodeURI(myParam));
+        document.getElementById("bookTitle").value = myParam;
+    </script>
 </body>
 </html>

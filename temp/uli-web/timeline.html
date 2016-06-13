@@ -3,132 +3,144 @@
 <head>
     <title>הספרייה הלאומית</title>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" /><!---->
+    <meta name="viewport" content="width=device-width, initial-scale=1" /><!--PopUp-->
     <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400" rel="stylesheet" />
     <script src="js/jquery-1.9.1.min.js"></script>
-    
     <script src="js/angular/angular.js"></script>
-  
     <script src="js/ui-bootstrap-tpls-1.3.3.js"></script>
-    
     <script src="js/angular/app/app.js"></script>
     <script src="js/angular/app/services/DataProviderService.js"></script>
     <script src="js/angular/app/controllers/BookTimeLineCtrl.js"></script>
     <script src="css/5grid/init.js?use=mobile,desktop"></script>
     <script src="js/jquery.formerize-1.1.js"></script>
-    <script src="js/init.js"></script>
-  
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script><!---->
-    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script><!---->
+    <script src="js/init.js"></script>  
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script><!--PopUp-->
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script><!--PopUp-->
+    
     <noscript>
-        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" /><!---->
-        <link rel="stylesheet" href="css/5grid/core.css" />
-        <link rel="stylesheet" href="css/5grid/core-desktop.css" />
-        <link rel="stylesheet" href="css/5grid/core-1200px.css" />
-        <link rel="stylesheet" href="css/5grid/core-noscript.css" />
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" /><!--PopUp-->
         <link rel="stylesheet" href="css/style.css" />
         <link rel="stylesheet" href="css/style-desktop.css" />
-        <link rel="stylesheet" href="css/noscript.css" />
     </noscript>
 
     <!--הגדרות סקריפט לציר הזמן-->
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="css/timeliner.css" type="text/css"  />
     <link rel="stylesheet" href="css/bootstrap.css" type="text/css" />
-    <link rel="stylesheet" href="css/timeliner.css" type="text/css" media="screen" />
-
-
 
 </head>
+
+
 <body ng-app="bookTimeLine">
+
     <div id="wrapper" style="opacity: 1; padding-top: 36.5px;" ng-controller="BookTimeLineCtrl">
-       <!-- tool bar for navigate from page to page-------- home- category- email -->
-        <nav id="nav"> <a href="email.html" class="icon icon-mail"><span>Email Me</span></a> <a href="category.html" class="icon icon-folder active"><span>category</span></a> <a href="home.html" class="icon icon-user"><span>Home</span></a>   </nav>
-     <!--  the main is the wite page in the website that contain the function of the user interface -->   
-     <div id="main" style="display: inline-block;">
-    
-         <div style="margin-left: 83%;margin-top: 1%;">
-             <img src="images/bookshelf.png" style="margin-left: -467%;width: 550%;" /> 
-         </div>
+
+
+
+
+        <!-- tool bar for navigate from page to page-------------------- home- category- email -->
+             <nav id="nav"> <a href="email.html" class="icon icon-mail"><span>Email Me</span></a> <a href="category.html" class="icon icon-folder active"><span>category</span></a> <a href="home.html" class="icon icon-user"><span>Home</span></a>   </nav>
+        <!---------------------------------------------------------------------------------------------------------->
+
+        <!--  the main is the wite page in the website that contain the function of the user interface -->   
+           <div id="main" style="display: inline-block;">
       
-         <div id="inside" style="width: 97%; height:100%; margin-bottom:7%; margin-left:2%;margin-top:2%">
-             <!--ng- repeat=  the year of the book= KEY & VALUE= the number of books in the same year -->
-             <div ng-repeat="(key,value) in bookDic" style="display:inherit;width: 100%;">
-                 <div class="timeline-wrapper;" section=section style="shape-margin:inherit;">
+        <!------------------------------------------------------------------------------------------------>
+                <!--BOOK SHELF IMAG - ON TOP PAGE-->
+             <div style="margin-left: 83%;margin-top: 1%;">
+                 <img src="images/bookshelf.png" style="margin-left: -467%;width: 550%;" /> 
+             </div>
+        <!-----------------------------------------------SEARCH PANEL DIV----------------------------------------------------------->
+                 <div   style="margin-left: 83%;margin-top: 3%;" >
                      <div class="row">
-                         <div class="col-xs-1" ng-bind="key"></div>                  
-                         <div class="col-xs-11 book-like-out-bar">
-                             <div class="row" ng-init="isCollapsed=true">
-                                 <div ng-click="isCollapsed = !isCollapsed" class="col-xs-12 book-count-bar" ng-style="calculateBarWidthByPerc(value.length)"></div>
-                             </div>
-                             <span class="caret pull-right fixed"></span>
-                             <div class="row" uib-collapse="isCollapsed">
-                                 <div class="well well-lg">
-                                       <div class="col-xs-1" ng-bind="'ספרים'+' '+ value.length+':'" style="width: 15%; margin-top: -3.5px; margin-left:-2%; padding:1%"></div>
-                                    <p></p>
-                                     <span ng-repeat="book in value" data-toggle="modal" data-target="#myModal"><img src="images/bookicon.png" class="book"/></span>
-
-
-
-
-
-
-                                     <div class="modal fade" id="myModal" role="dialog">
-                                         <div class="modal-dialog">
-                                             <!-- Trigger the modal with a button -->
-                                             <input type="image" class="btn btn-info btn-lg" src="images/bookicon1.png" alt="Submit" data-toggle="modal" data-target="#myModal" />
-
-                                             <!-- Modal content-->
-                                             <div class="modal-content">
-                                                 <div class="modal-header">
-                                                     <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                                     <h4 class="modal-title" style="text-align:right;">:שם הספר</h4>
-                                                 </div>
-                                                 <div class="modal-body" style="text-align:right;">
-
-                                                     <p>:שם המחבר/ת</p>
-                                                     <p>:שנת הוצאה</p>
-                                                     <p>:שם הוצאה</p>
-                                                 </div>
-                                                 <div class="modal-footer">
-                                                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                                 </div>
-                                             </div>
-
-                                         </div>
-                                     </div>
-
-
-
-
-
-
-
+                         <div class="span12">
+                             <form id="custom-search-form" class="form-search form-horizontal pull-right">
+                                 <div class="input-append span12" style="margin-left:-16%">
+                                     <input type="text" class="search-query mac-style" ng-model="userfilter" placeholder="Search" />
+                                     <button type="submit" class="btn"><img src="images/ic_search1.png" /></button><!--SEARCH IMAG BUTTON-->
                                  </div>
-                             </div>
+                             </form>
                          </div>
                      </div>
-                 </div><!-- /.timeline-wrapper -->
+                 </div>
+       <!------------------------------------------------------------TIMELINE GRAPH PANEL ----------------------------------------------------->
+         <div id="inside" style="width: 97%; height:100%; margin-bottom:7%; margin-left:2%;margin-top:2%">
+             <!--ng- repeat=  the year of the book= KEY & VALUE= the number of books in the same year -->
+             <div id="stripe" ng-repeat="(key,value) in bookDic" style="display:inherit;width: 100%;">
+                 <div section=section style="shape-margin:inherit;">
+
+                                                      <div class="row">
+                                         <div class="col-xs-1" ng-bind="key"></div>  <!--THE YEAR ON THE TIMELINE-->                
+                                         <div class="col-xs-11 book-like-out-bar"><!--GRAPH STRIPE-->
+                                                         <div class="row" ng-init="isCollapsed=true">
+                                                             <div ng-click="isCollapsed = !isCollapsed" data-toggle="tooltip" title="{{value.length}}" class="col-xs-12 book-count-bar" ng-style="calculateBarWidthByPerc(value.length)" >
+                                                              
+                                                             </div> <!--GRAPH STRIPE SIZE CALCULATE-->      
+                                                         </div>
+                                             <span class="caret pull-right fixed"></span>
+                                             <div class="row" uib-collapse="isCollapsed">
+                                                 <div class="well well-lg">
+                                                     <span class="badge" ng-bind="value.length"  style="margin-left: 97%;"></span><!--NUM OF BOOKS PER-YEAR-->
+                                    
+                                                     <div style="width: 98%;">
+                                                         <span ng-repeat="book in value" data-toggle="modal" data-target="#myModal" ng-click="saveBook(book)"><img src="images/bookicon.jpg" class="book" /></span><!--BOOK ITEM INSIDE- BOOK ICON-->
+                                                     </div>
 
 
-             </div>
+                                                 </div>
+                                             </div>
+                                         </div>
+                                     </div>
+                 
+ <!-------------------------------------  POPUP WINDOW FOR THE BOOK DATA ------------------------------------------------------------ -->
+                                     
+            <div class="modal fade" id="myModal" role="dialog">
+                   <div class="modal-dialog">
+                            <!-- Trigger the modal with a button - BOOK ICON BUTTON-->
+                            <input type="image" class="btn btn-info btn-lg"  alt="Submit" src="images/bookicon.png" data-toggle="modal" data-target="#myModal" /><!-- BOOK IMG ON TOP OF THE POPUP WIN -->
+
+                               <!-- Modal content-->
+                              <div class="modal-content" >
+                                         <div class="modal-header">
+                                               <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                               <h4 class="modal-title" style="text-align:right;" ng-bind="selectedBook.altTitle"></h4>
+                                          </div>
+                                                
+                                          <div class="modal-body" style="text-align:right;">
+                                                   <p ng-bind="'שם המחבר/ת :' +selectedBook.authors[0]"></p>
+                                                   <p ng-bind="selectedBook.link[0]"></p>
+                                                   <p>:שם הוצאה</p>
+                                          </div>
+                                  
+                                          <div class="modal-footer">
+                                                      <button type="button" class="btn btn-default"  data-dismiss="modal">יציאה</button> <!-- EXIT BUTTON FROM THE POPUP WIN -->
+                                                      <a href="email.html?name={{selectedBook.altTitle}}"> <button type="button" class="btn btn-default">שלח מייל</button></a> <!-- SEND MAIL BY THE BOOK TITLE --> 
+                                          </div>
+                                </div>
+                     </div>
+              </div>
+ <!--------------------------------------------------------------------------------------------------------->
+              </div><!-- /.timeline-wrapper -->
+         </div><!-- id=stripe-->
+    </div> <!-- id=inside-->
+                   
+                    <!-- END OF PAGE PIC -->
+                    <div style="margin-left: 83%;margin-top: -7%; margin-bottom:1.5%;">
+                          <img src="images/iconYear.png" style="margin-left:-212%; margin-top: 11%;" />  
+                    </div>
+
+</div><!-- main -->
 
 
-         </div>
-         <div style="margin-left: 83%;margin-top: -7%; margin-bottom:1.5%;">
-             <img src="images/iconYear.png" style="margin-left:-212%; margin-top: 11%;" />
-         </div>
-        </div><!-- main -->
-
-
-
-        <div id="footer">
-            <ul class="links">
-                <li>&copy; Moran Shalom</li>
-                <li>אתר הבית : <a href="http://web.nli.org.il/sites/NLI/Hebrew/Pages/default.aspx">הספרייה הלאומית</a></li>
-
-            </ul>
-        </div>
-    </div><!--wrapper-->
+ <!------------------------------------------------ FO0TER --------------------------------------------------------->
+       <div id="footer">
+             <ul class="links">
+                  <li>&copy; Moran Shalom</li>
+                  <li>אתר הבית : <a href="http://web.nli.org.il/sites/NLI/Hebrew/Pages/default.aspx">הספרייה הלאומית</a></li>
+             </ul>
+       </div>
+  <!--------------------------------------------------------------------------------------------------------->
+    
+ </div><!--wrapper-->
 </body>
 </html>

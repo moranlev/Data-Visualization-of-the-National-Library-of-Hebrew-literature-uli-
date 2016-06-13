@@ -1,9 +1,22 @@
 myApp.controller('BookTimeLineCtrl', function (dataService, $scope, $uibModal) {
 
     $scope.bookDic = {};
+    $scope.bookTitle = {};
+    $scope.selectedBook = { altTitle : 'test'};
     $scope.maxBooksPerYear = 0;
+    $scope.userfilter='';
 
-    $scope.bookdatapars = {};
+    $scope.saveBook = function (book) {
+        $scope.selectedBook = book;
+    }
+
+    $scope.bookDicFilter = function (bookArr) {
+        return true;
+        console.log(bookArr);
+        for (var i = 0; i < bookArr.length; i++) {
+            return (!$scope.userfilter) || (bookArr[i].subjects.contains($scope.userfilter));
+        }
+    }
 
     $scope.init = function () {
         console.log('inside the loop ' + dataService.length);
@@ -36,6 +49,32 @@ myApp.controller('BookTimeLineCtrl', function (dataService, $scope, $uibModal) {
         return { width: perc + '%' };
     }
 
+    
+    $scope.title = function () {
+        console.log('inside the loop ' + dataService.length);
+        for (var i = 0; i < dataService.length; i++) {
+            var bookIte = dataService[i];
+            if (!$scope.bookTitle[bookIte.title]) {
+                $scope.bookTitle[bookIte.title] = [];
+            }
+            $scope.bookTitle[bookIte.title].push(bookIte);
 
+        }
+       
+    }
+    $scope.title();
+
+   
+    $scope.background = function () {
+
+        var change=1;
+        console.log(change + ' RANDOM');
+    
+            return { change };
+    }
+    $scope.background();
+  
+  
+    
 });
 

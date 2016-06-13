@@ -1,14 +1,7 @@
 /* ============ TIMELINER.JS ============= */
 
 
-/*time-line- all the line*/
-.timeline-container {
- /* background: url(../images/bookicon.png) left center repeat-y;  */
-  border-left: 3px solid #666; /* - red line */
-  margin: 1px auto;
-  width: 600px;
 
-}
 /* EXPENTALL*/
 .timeline-toggle {
   background: #fcd7aa;
@@ -39,39 +32,26 @@
   margin: 0 0 10px;
   padding: 4px 4px 4px 20px;
 }
-/*year*/
-.timeline-wrapper h2 span {
- background: url(../images/iconYear.png) repeat-x; 
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 1px;
-  border-radius: 1px;
-  color: #666;
-  letter-spacing: 0.1em;
-  font-size:22px;
-  line-height:1.5em;
-  padding: 18px 0px 4px;
-  /* 
-  background: #fcd7aa;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
-  color: #666;
-  letter-spacing: 0.1em;
-  line-height: 1.7em;
-  padding: 3px 5px 1px;
-      */
-}
 
+
+
+
+
+  /* CSS FOR COUNTING GRAPH */
 
 .book-like-out-bar{
        height: auto;
        
     
 }
+
+
 .book-count-bar{
    height: 22px;
-   background-color:#7D1515;
-   
+  
+  /*background-color:#15487D;  */
+     background-image:url(../images/green.jpg) ; 
+  
 }
 .book-count-bar:active {
 	position:relative;
@@ -79,14 +59,18 @@
 }
 
 .book-count-bar:hover {
-    background-color: #bd1717;
+    background-color: #337ab7;
 }
 .fixed{
     margin-bottom:5px;
 }
 
+
+
+  /* CSS FOR BOOK ICON INSIDE THE COUNTING GRAPH */
 .book{
-        margin-left: 0.4%;
+        margin-left: 0.6%;
+        margin-top: 0.6%;
 }
 .book:active{
     	position:relative;
@@ -98,5 +82,51 @@
 }
 
 
+  /* CSS FOR SEARCHING BOK */
+
+    #custom-search-form {
+        margin:0;
+        margin-top: 5px;
+        padding: 0;
+    }
+ 
+    #custom-search-form .search-query {
+        padding-right: 3px;
+        padding-right: 4px \9;
+        padding-left: 3px;
+        padding-left: 4px \9;
+        /* IE7-8 doesn't have border-radius, so don't indent the padding */
+ 
+        margin-bottom: 0;
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        border-radius: 3px;
+        -webkit-transition: width  0.2s ease-in-out;
+    -moz-transition:width  0.2s ease-in-out;
+    -o-transition: width  0.2s ease-in-out;
+    transition: width  0.2s ease-in-out;
+    }
+ 
+    #custom-search-form button {
+        border: 0;
+        background: none;
+        /** belows styles are working good */
+        padding: 2px 5px;
+        margin-top: -5px;
+        position: relative;
+        left: -39px;
+        /* IE7-8 doesn't have border-radius, so don't indent the padding */
+        margin-bottom: 0;
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        border-radius: 3px;
+    }
+ 
+    .search-query:focus + button {
+        z-index: 3;   
+    }   
+    .search-query:focus{
+        width: 260px;
+    }   
 
 
